@@ -7,7 +7,7 @@ import {SinginForm} from '../../components/Auth';
 import {ButtonRounded, ButtonServices} from '../../commons/Buttons';
 import colors from '../../themes/colors';
 
-export default function Signin() {
+export default function Signin({navigation}) {
   const [loading, setLoading] = useState(false);
   const [loadingService, setLoadingService] = useState({
     apple: false,
@@ -21,6 +21,7 @@ export default function Signin() {
   const handleChangue = (input, value) => {
     setFormValues({...formValues, [input]: value});
   };
+  const goToHome = () => navigation.push('home');
   const handleValidate = () =>
     formValues.userName === '' || formValues.password === '';
 
@@ -33,12 +34,14 @@ export default function Signin() {
     }
     setTimeout(() => {
       setLoading(false);
+      goToHome();
     }, 2000);
   };
   const handleSubmitWithServices = service => {
     setLoadingService({...loadingService, [service]: true});
     setTimeout(() => {
       setLoadingService({...loadingService, [service]: false});
+      goToHome();
     }, 2000);
   };
   return (
