@@ -2,18 +2,33 @@ import React, {useState} from 'react';
 import {styles} from './styles';
 import Wrapper from '../../components/WrapperMain';
 import MyText from '../../commons/MyText';
-import {View} from 'react-native';
+import {Alert, View} from 'react-native';
 import {SinginForm} from '../../components/Auth';
 import {ButtonRounded, ButtonServices} from '../../commons/Buttons';
 import colors from '../../themes/colors';
 
 export default function Signin() {
+  const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
-    email: '',
+    userName: '',
     password: '',
   });
   const handleChangue = (input, value) => {
     setFormValues({...formValues, [input]: value});
+  };
+  const handleValidate = () =>
+    formValues.userName === '' || formValues.password === '';
+
+  const handleSubmit = () => {
+    setLoading(true);
+    if (handleValidate()) {
+      setLoading(false);
+      Alert.alert('There was an error logging in', 'All fields are required');
+      return;
+    }
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   };
   return (
     <Wrapper>
@@ -23,7 +38,8 @@ export default function Signin() {
         <SinginForm onChange={handleChangue} values={formValues} />
         <View style={styles.containerBtn}>
           <ButtonRounded
-            handlerAction={() => {}}
+            loading={loading}
+            handlerAction={handleSubmit}
             customStyles={styles.btn}
             customStylesLabel={styles.labelBtn}
             label="Sign in"

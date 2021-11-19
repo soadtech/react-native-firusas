@@ -1,5 +1,5 @@
-import React from 'react';
-import {TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+import {ActivityIndicator, TouchableOpacity} from 'react-native';
 import {_styles} from './styles';
 import MyText from '../../MyText';
 
@@ -8,15 +8,21 @@ export default function ButtonRounded({
   handlerAction,
   customStyles,
   customStylesLabel,
+  loading,
 }) {
   const styles = _styles(false);
   return (
     <TouchableOpacity
+      disabled={loading}
       onPress={handlerAction}
       style={[styles.container, customStyles]}>
-      <MyText customStyles={{...styles.text, ...customStylesLabel}}>
-        {label}
-      </MyText>
+      {loading ? (
+        <ActivityIndicator />
+      ) : (
+        <MyText customStyles={{...styles.text, ...customStylesLabel}}>
+          {label}
+        </MyText>
+      )}
     </TouchableOpacity>
   );
 }

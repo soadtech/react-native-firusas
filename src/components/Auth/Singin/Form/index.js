@@ -9,9 +9,9 @@ export default function Form({values, onChange}) {
     <View style={styles.container}>
       <View style={styles.containerInput}>
         <TextInput
-          value={values.email}
-          onChangeText={text => onChange('email', text)}
-          placeholder="Your email"
+          value={values.userName}
+          onChangeText={text => onChange('userName', text)}
+          placeholder="Usermame"
         />
       </View>
       <View
@@ -22,6 +22,7 @@ export default function Form({values, onChange}) {
           justifyContent: 'space-between',
         }}>
         <TextInput
+          style={{width: '90%'}}
           value={values.password}
           onChangeText={text => onChange('password', text)}
           secureTextEntry={secureTextEntry}
