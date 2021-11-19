@@ -2,7 +2,6 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {TouchableOpacity, View} from 'react-native';
 import {styles} from './styles';
-import colors from '../../../themes/colors';
 import MyText from '../../MyText';
 
 export default function ButtonServices({service, icon, color}) {
