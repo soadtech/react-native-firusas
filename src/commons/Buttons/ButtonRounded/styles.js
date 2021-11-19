@@ -7,7 +7,7 @@ export const _styles = disabled =>
     container: {
       backgroundColor: disabled ? colors.gray : colors.primary,
       width: Metrics.screenWidth * 0.4,
-      height: Metrics.screenWidth * 0.14,
+      height: Metrics.screenWidth * 0.11,
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 30,

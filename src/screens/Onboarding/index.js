@@ -21,6 +21,7 @@ export default function Onboarding({navigation}) {
           <ButtonRounded
             handlerAction={handleValidationAuth}
             customStyles={styles.btn}
+            customStylesLabel={styles.labelBtn}
             label="Get Started"
           />
         </View>

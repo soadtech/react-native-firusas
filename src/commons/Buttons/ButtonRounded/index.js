@@ -14,7 +14,9 @@ export default function ButtonRounded({
     <TouchableOpacity
       onPress={handlerAction}
       style={[styles.container, customStyles]}>
-      <MyText customStyles={[styles.text, customStylesLabel]}>{label}</MyText>
+      <MyText customStyles={{...styles.text, ...customStylesLabel}}>
+        {label}
+      </MyText>
     </TouchableOpacity>
   );
 }

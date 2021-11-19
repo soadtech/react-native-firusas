@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {Metrics} from '../../themes/metrics';
+import colors from '../../themes/colors';
 
 export const styles = StyleSheet.create({
   container: {
@@ -23,5 +24,8 @@ export const styles = StyleSheet.create({
   btn: {
     backgroundColor: 'white',
     height: Metrics.screenWidth * 0.13,
+  },
+  labelBtn: {
+    color: colors.primary,
   },
 });
