@@ -1,10 +1,11 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
+import Wrapper from '../../components/WrapperMain';
 
 export default function Signin() {
   return (
-    <View>
+    <Wrapper>
       <Text>Signin</Text>
-    </View>
+    </Wrapper>
   );
 }
