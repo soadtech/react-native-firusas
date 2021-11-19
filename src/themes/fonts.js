@@ -1,13 +1,26 @@
-export const allura = {
-  regular: {
-    fontFamily: 'Allura-Regular.ttf',
+export default {
+  black: {
+    fontFamily: 'GTWalsheimPro-Black',
   },
-};
-export const playfair = {
-  regular: {
-    fontFamily: 'PlayfairDisplay-Variable.ttf',
+  bold: {
+    fontFamily: 'GTWalsheimPro-Bold',
   },
-  italic: {
-    fontFamily: 'PlayfairDisplay-Italic.ttf',
+  light: {
+    fontFamily: 'GTWalsheimPro-Light',
+  },
+  medium: {
+    fontFamily: 'GTWalsheimPro-Medium',
+  },
+  regular: {
+    fontFamily: 'GTWalsheimPro-Regular',
+  },
+  thin: {
+    fontFamily: 'GTWalsheimPro-Thin',
+  },
+  ultraBold: {
+    fontFamily: 'GTWalsheimPro-UltraBold',
+  },
+  ultraLight: {
+    fontFamily: 'GTWalsheimPro-UltraLight',
   },
 };

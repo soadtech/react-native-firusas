@@ -37,8 +37,7 @@
   },
   "rnpm": {
     "assets": [
-      "./src/assets/fonts/Allura",
-      "./src/assets/fonts/Playfair"
+      "./src/assets/fonts/"
     ]
   }
 }

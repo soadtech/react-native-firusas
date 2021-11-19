@@ -72,6 +72,14 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>GTWalsheimPro-Black.ttf</string>
+		<string>GTWalsheimPro-Bold.ttf</string>
+		<string>GTWalsheimPro-Light.ttf</string>
+		<string>GTWalsheimPro-Medium.ttf</string>
+		<string>GTWalsheimPro-Regular.ttf</string>
+		<string>GTWalsheimPro-Thin.ttf</string>
+		<string>GTWalsheimPro-UltraBold.ttf</string>
+		<string>GTWalsheimPro-UltraLight.ttf</string>
 	</array>
 </dict>
 </plist>
