@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {styles} from './styles';
 import Wrapper from '../../components/WrapperMain';
 import MyText from '../../commons/MyText';
@@ -8,12 +8,19 @@ import {ButtonRounded, ButtonServices} from '../../commons/Buttons';
 import colors from '../../themes/colors';
 
 export default function Signin() {
+  const [formValues, setFormValues] = useState({
+    email: '',
+    password: '',
+  });
+  const handleChangue = (input, value) => {
+    setFormValues({...formValues, [input]: value});
+  };
   return (
     <Wrapper>
       <MyText customStyles={styles.title}>Sign In</MyText>
 
       <View style={styles.containerForm}>
-        <SinginForm />
+        <SinginForm onChange={handleChangue} values={formValues} />
         <View style={styles.containerBtn}>
           <ButtonRounded
             handlerAction={() => {}}
@@ -41,7 +48,8 @@ export default function Signin() {
       </View>
 
       <MyText customStyles={styles.hasAccount}>
-        Do you already have an account? <MyText customStyles={styles.action}>SignUp</MyText>
+        Do you already have an account?{' '}
+        <MyText customStyles={styles.action}>SignUp</MyText>
       </MyText>
     </Wrapper>
   );
