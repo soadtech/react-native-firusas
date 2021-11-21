@@ -3,6 +3,7 @@ import fonts from "../../../themes/fonts";
 
 export const styles = StyleSheet.create({
   container: {
+    marginTop: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',

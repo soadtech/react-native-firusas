@@ -1,11 +1,20 @@
 import React from 'react';
 import {StatusBar, View} from 'react-native';
 import {styles} from './styles';
+import colors from '../../themes/colors';
 
-export default function CustomStatusBar({backgroundColor, ...props}) {
+export default function CustomStatusBar({
+  backgroundColor = colors.grayLigth,
+  ...props
+}) {
   return (
     <View style={[styles.statusBar, {backgroundColor}]}>
-      <StatusBar translucent backgroundColor={backgroundColor} {...props} />
+      <StatusBar
+        barStyle="dark-content"
+        translucent
+        backgroundColor={backgroundColor}
+        {...props}
+      />
     </View>
   );
 }
