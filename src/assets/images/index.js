@@ -4,3 +4,7 @@ export const CATEGORY_DRESS = require('./dress.jpeg');
 export const CATEGORY_HITS = require('./hits.jpeg');
 export const CATEGORY_SHIRT = require('./shirt.jpeg');
 export const CATEGORY_SKIRT = require('./skirts.jpeg');
+export const RECOMMENDATION_DRESS_1 = require('./dress_1.jpeg');
+export const RECOMMENDATION_DRESS_2 = require('./dress_2.jpeg');
+export const RECOMMENDATION_SKIRT_1 = require('./skirt_1.jpeg');
+export const RECOMMENDATION_SKIRT_2 = require('./skirt_2.jpeg');
