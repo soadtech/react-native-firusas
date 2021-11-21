@@ -1,7 +1,6 @@
 import React from 'react';
 import {ScrollView, View} from 'react-native';
 import Category from './Category';
-import MyText from '../../../commons/MyText';
 import {
   CATEGORY_DRESS,
   CATEGORY_HITS,

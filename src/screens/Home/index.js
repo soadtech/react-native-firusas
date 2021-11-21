@@ -1,5 +1,5 @@
 import React from 'react';
-import {ImageBackground, Text, View} from 'react-native';
+import {View} from 'react-native';
 import Wrapper from '../../components/WrapperMain';
 import Header from '../../components/Home/Header';
 import {styles} from './styles';
