@@ -10,7 +10,7 @@ import ListRecommendations from '../../components/Home/ListRecommendations';
 export default function Home() {
   return (
     <Wrapper>
-      <ScrollView style={styles.container}>
+      <ScrollView showsVerticalScrollIndicator={false} style={styles.container}>
         <Header />
         <Banner />
         <ListCategories />
