@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import colors from '../../../../themes/colors';
 
 export const styles = StyleSheet.create({
@@ -11,6 +11,6 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: colors.gray,
     paddingHorizontal: 12,
-    paddingVertical: 11,
+    paddingVertical: Platform.OS === 'ios' ? 11 : 0,
   },
 });
